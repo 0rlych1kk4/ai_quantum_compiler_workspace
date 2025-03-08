@@ -1,0 +1,8 @@
+[package]
+name = "quantum_compiler"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+quil-rs = "0.7.0"  # Quantum Intermediate Representation
+

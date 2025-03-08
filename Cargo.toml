@@ -1,0 +1,4 @@
+[workspace]
+members = ["ai_optimizer", "quantum_compiler", "quantum_executor", "quantum_app"]
+resolver = "2"
+

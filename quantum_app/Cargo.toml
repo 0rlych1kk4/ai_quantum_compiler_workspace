@@ -1,0 +1,10 @@
+[package]
+name = "quantum_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ai_optimizer = { path = "../ai_optimizer" }
+quantum_compiler = { path = "../quantum_compiler" }
+quantum_executor = { path = "../quantum_executor" }
+
