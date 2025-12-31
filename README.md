@@ -1,35 +1,74 @@
-#  AI-Powered Quantum Compiler for Rust
+# Quantum Compiler for Rust (Stable v1.x)
 
-Welcome to the **AI-Powered Quantum Compiler**, a Rust-based system that integrates **Artificial Intelligence (AI) and Quantum Computing** to optimize, compile, and execute quantum programs efficiently.
+Welcome to the **Quantum Compiler for Rust**, a modular and deterministic
+Rust workspace for compiling, optimizing, and executing quantum programs
+using the Quil intermediate representation.
 
-##  Features
--  **AI-Based Quantum Optimization**: Uses deep learning to optimize quantum circuits.
--  **Rust-Based Quantum Compiler**: Compiles Rust quantum functions into quantum assembly (Quil).
--  **Quantum Execution Backend**: Executes optimized circuits on a simulated or real quantum backend.
+This project provides a **stable architectural foundation** for future
+AI-assisted and hardware-aware quantum compilation, while maintaining
+strictly deterministic behavior in v1.x.
 
-##  Project Structure
+---
+
+## Stability Status
+
+**Current version:** v1.x (Stable)
+
+This release guarantees:
+- Deterministic compilation and optimization
+- Stable public APIs across v1.x
+- No placeholder or misleading functionality
+- Fully simulated execution backend
+
+> ️ No machine learning or AI models are used in v1.x.
+> AI-based optimization is a **planned future capability**.
+
+---
+
+## Features (v1.x)
+
+- **Deterministic Quantum Compilation**
+  - Compiles Rust-based quantum source input into Quil IR
+  - Same input always produces the same output
+
+- **Deterministic Optimization Pass**
+  - Stable optimization interface
+  - Currently implemented as an identity transform (no heuristics, no ML)
+
+- **Simulated Quantum Execution Backend**
+  - Executes compiled Quil programs in a safe, predictable environment
+  - Designed for extensibility to real backends in future versions
+
+- **Modular Rust Workspace**
+  - Clear separation of concerns
+  - Easy to extend without breaking APIs
+
+---
+
+## Project Structure
+
 ```plaintext
 ai_quantum_compiler_workspace/
-│── Cargo.toml  # Workspace manifest
-│── quantum_program.rs  # Rust quantum program (root-level)
+│── Cargo.toml            # Workspace manifest
+│── quantum_program.rs    # Example Rust quantum program
 │
 ├── ai_optimizer/
 │   ├── Cargo.toml
-│   ├── src/
-│   │   ├── lib.rs  # AI-based quantum optimizer
+│   └── src/
+│       └── lib.rs        # Deterministic optimizer (v1.x stable)
 │
 ├── quantum_compiler/
 │   ├── Cargo.toml
-│   ├── src/
-│   │   ├── lib.rs  # Compiles Rust quantum code to Quil
+│   └── src/
+│       └── lib.rs        # Rust → Quil compiler (deterministic)
 │
 ├── quantum_executor/
 │   ├── Cargo.toml
-│   ├── src/
-│   │   ├── lib.rs  # Executes compiled quantum circuits
+│   └── src/
+│       └── lib.rs        # Simulated execution backend
 │
 ├── quantum_app/
 │   ├── Cargo.toml
-│   ├── src/
-│   │   ├── main.rs  # Main application entry point
+│   └── src/
+│       └── main.rs       # End-to-end application entry point
 

@@ -4,5 +4,3 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-tch = "0.10.0"  # PyTorch bindings for AI optimization
-
