@@ -9,6 +9,12 @@ AI-assisted and hardware-aware quantum compilation, while maintaining
 strictly deterministic behavior in v1.x.
 
 ---
+## Teaching & Research Use
+
+The project includes a teaching lab that demonstrates deterministic quantum
+compilation with byte-for-byte reproducibility across repeated runs.
+
+---
 
 ## Stability Status
 
