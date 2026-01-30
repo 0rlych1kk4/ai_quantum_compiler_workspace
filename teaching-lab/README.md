@@ -35,6 +35,15 @@ cargo run --example simple_program
 # Run it again and compare output
 cargo run --example simple_program
 ```
+### Verified Determinism
+
+The following commands were run twice:
+
+```bash
+cargo run -p quantum_app --example simple_program > run1.out
+cargo run -p quantum_app --example simple_program > run2.out
+diff run1.out run2.out
+```
 ### Why this matters
 Many quantum toolchains apply heuristic or non-deterministic transformations that make results hard to reproduce.
 This project’s stable v1.x line preserves **strict determinism**, enabling:
