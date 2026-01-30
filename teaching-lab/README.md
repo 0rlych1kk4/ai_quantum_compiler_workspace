@@ -23,6 +23,18 @@ Prove that compiling the same input multiple times produces **identical** Quil o
 4. Compare the generated Quil output
 5. Confirm outputs are identical
 
+### Example Commands
+
+```bash
+# Build the workspace
+cargo build
+
+# Run the example program
+cargo run --example simple_program
+
+# Run it again and compare output
+cargo run --example simple_program
+```
 ### Why this matters
 Many quantum toolchains apply heuristic or non-deterministic transformations that make results hard to reproduce.
 This project’s stable v1.x line preserves **strict determinism**, enabling:
