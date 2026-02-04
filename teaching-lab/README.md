@@ -8,6 +8,7 @@ The labs are designed to demonstrate:
 - an **inspectable compilation pipeline** for correctness-focused work
 
 ## Lab 01 — Reproducible Compilation
+See [DETERMINISM.md](./DETERMINISM.md) for the formal definition, verification steps, and scope of the determinism guarantee.
 
 ### Goal
 Prove that compiling the same input multiple times produces **identical** Quil output.
