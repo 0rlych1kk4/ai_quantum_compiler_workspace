@@ -1,2 +1,18 @@
+# macOS
 .DS_Store
+
+# Rust build artifacts
 target/
+
+# Output / generated files
+*.out
+
+# Logs
+*.log
+
+# IDEs / Editors
+.vscode/
+.idea/
+
+# Optional: environment files
+.env
