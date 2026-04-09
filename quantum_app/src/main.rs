@@ -11,7 +11,10 @@ fn main() {
 
     // 2) Deterministic optimization pass (text-based for v1.x)
     let compiled_text = format!("{:?}", compiled_program);
-    let optimized_text = Optimizer::optimize(&compiled_text);
+
+    // FIX: create an Optimizer instance first, then call the instance method.
+    let optimizer = Optimizer::new();
+    let optimized_text = optimizer.optimize(&compiled_text);
 
     println!("Optimized representation:\n{optimized_text}");
 
