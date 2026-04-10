@@ -155,6 +155,20 @@ It serves as a foundation for next-generation quantum compilers combining
 systems engineering, formal guarantees, and intelligent optimization.
 ---
 
+## Example Run
+
+The optimizer pipeline runs deterministically and applies built-in passes in sequence:
+
+```text
+Compiling Rust-based quantum code to Quil...
+Running deterministic optimization pipeline...
+Applying optimization pass: normalize_whitespace
+Applying optimization pass: remove_consecutive_duplicate
+```
+Example optimized representation:
+```rust
+Program { calibrations: Calibrations { calibrations: CalibrationSet { data: [] }, measure_calibrations: CalibrationSet { data: [] } }, extern_pragma_map: ExternPragmaMap({}), frames: FrameSet { frames: {} }, memory_regions: {}, waveforms: {}, gate_definitions: {}, instructions: [Gate(Gate { name: "H", parameters: [], qubits: [Fixed(0)], modifiers: [] })], used_qubits: {Fixed(0)} }
+```
 ## Project Structure
 
 ```plaintext
